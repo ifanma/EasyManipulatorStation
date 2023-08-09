@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>ESP Web Server</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/three.js/r83/three.min.js"></script> -->
+
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+        "three": "https://unpkg.com/three@0.155.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.155.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+    <div class="topnav">
+        <h1>ESP WebSocket Server</h1>
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <h2>Output - GPIO 2</h2>
+            <p class="state">state: <span id="state">%STATE%</span></p>
+            <p><button id="button" class="button">Toggle</button></p>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="animate" id="showWindow"></div>
+
+</body>
+
+</html>
